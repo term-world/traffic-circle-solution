@@ -14,8 +14,8 @@ class Stoplight(FixtureSpec):
     self.timing = light_time if light_time else "00:00:00"
 
   def __str__(self) -> str:
-    turn = "\n➡️" if self.turn_signal else ""
-    return f"{self.state}{turn}"
+    self.state += "\n➡️" if self.turn_signal else ""
+    return self.state
 
   def __time_now(self) -> str:
     now = datetime.now()
