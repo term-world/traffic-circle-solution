@@ -12,7 +12,6 @@ class Bus(FixtureSpec):
 
     def __init__(self):
         super().__init__()
-        #self. n = narrator.Narrator()
 
     @staticmethod
     def __get_light(direction) -> str:
@@ -66,10 +65,11 @@ class Bus(FixtureSpec):
         #------------------------
 
 def main():
+    # Get the current directory, add access for stoplights
     cwd = check_flag("cwd")
-
     sys.path.append(cwd)
 
+    # Create the Bus so that we can use it
     obj = Bus()
     obj.use()
 
