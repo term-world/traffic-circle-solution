@@ -73,5 +73,10 @@ def main():
     obj = Bus()
     obj.use()
 
+    # Keep track of where this thing has gone
+    if os.path.exists(f"{cwd}/.bus"):
+        os.unlink(f"{cwd}/.bus")
+    os.symlink("Bus.py",f"{cwd}/.bus")
+
 if __name__ == "__main__":
     main()

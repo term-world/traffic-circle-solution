@@ -56,5 +56,10 @@ def main():
     obj = Car()
     obj.use(direction)
 
+    # Keep track of where this thing has gone
+    if os.path.exists(f"{cwd}/.car"):
+        os.unlink(f"{cwd}/.car")
+    os.symlink("Car.py",f"{cwd}/.car")
+
 if __name__ == "__main__":
     main()
