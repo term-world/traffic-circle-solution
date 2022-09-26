@@ -20,8 +20,8 @@ class Stoplight(FixtureSpec):
 
     #----------------------
     if light == "🔴":
-      light = ""
-    elif light == "":
+      light = "⚫"
+    elif light == "⚫":
       light = "🔴"
     #----------------------
     

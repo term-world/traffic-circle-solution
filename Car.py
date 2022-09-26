@@ -19,9 +19,6 @@ class Car(FixtureSpec):
             f"{direction}.Stoplight"
         )
         return stoplight.Stoplight()
-    
-    def __make_turn(self, direction) -> None:
-        pass
 
     def use(self, direction: str = "north") -> None:
         # Do not alter
