@@ -147,6 +147,8 @@ All of the above tasks completed, finish the collaborative reflection located in
 
 ## Branching `traffic-circle` content
 
+** Make sure to make a new branch for each sector of the `traffic-circle`, this will keep your work much more organized.
+
 Even when working collaboratively with others on a single project, you'll still need to `add`, `commit`, and `push` your work. However, there's a few additional steps that have to be taken to keep your group's workflow organized.
 
 Each repository has a `main` version of itself that represents exactly that, the "main" version of the repository. This is the version that is cloned whenever somebody runs a `git clone` command with that repository as its target, and the contents of `main` are what is pulled when somebody updates their local workspace's version of the repository with `git pull`.
