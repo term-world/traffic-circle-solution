@@ -1,9 +1,11 @@
 {
-  "south_light": "",
+  "south_light": "\u26ab",
   "east_light": "\ud83d\udd34",
   "east_turn": "00:00:00",
   "north_light": "\ud83d\udfe2",
   "west_light": "\ud83d\udfe2",
   "west_time": "23:55:57",
-  "cwd": "/world/city/Ix/dluman/traffic-circle"
+  "cwd": "/world/city/Ix/dluman/traffic-circle",
+  "north_west_light": "\ud83d\udfe2",
+  "north_west_crosswalk": "\u274c"
 }
