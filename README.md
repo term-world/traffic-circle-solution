@@ -219,7 +219,7 @@ In order to run the `grader` for this week's work, you'll need to be in the topm
 gatorgrade
 ```
 
-### Making an improvement proposal
+## Making an improvement proposal
 
 This assignment begins your opportunity to propose and improve the world of `term-world` at-large. For this assignment, proposals may include making graphics to improve the `bodega` site experience, creating new items or actions in the `traffic-circle` itself or another assignment-related improvement not contemplated in the prior narrow categories.
 
@@ -229,7 +229,18 @@ To make an improvement proposal, you must _create an issue_ on this repository. 
 * clicking the green `New Issue` button
 * selecting the `Improvement Proposal` template 
 
-**You must fill out the entire template and wait for Mayoral approval before starting the improvement.**
+### Improvement Suggestions
+
+* Add a new emergency vehicle 
+* Add a bike
+* Make the bus stop for new passengers
+* Add new signals for the vehicles such as:
+ * Contruction
+ * Pedestrians
+ * Yellow lights
+*  Create a new traffic light
+
+**If you are not following an improvment suggestion you need to have your imporment suggestion checked by the professor before proceeding.**
 
 ## Submitting `traffic-circle` Content
 
