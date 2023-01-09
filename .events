@@ -1,3 +1,5 @@
+touch.flags
+
 if [[ "$(jq .cwd .flags)" == null ]]; then
   python -c "import os
 from narrator.Checkpoint import set_flag
