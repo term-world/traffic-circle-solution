@@ -8,7 +8,7 @@ class Stoplight(FixtureSpec):
   def __init__(self) -> None:
     super().__init__()
     flag = check_flag("south_light")
-    self.state = flag if flag == "" else "🔴"
+    self.state = flag if flag == "⚫" else "🔴"
 
   def __str__(self) -> str:
     return f"{self.state}"
@@ -31,9 +31,9 @@ class Stoplight(FixtureSpec):
     # Do not alter
 
 def main():
-  obj = Stoplight()
-  obj.use()
-  print(obj)
+  stoplight = Stoplight()
+  stoplight.use()
+  print(stoplight)
 
 if __name__ == "__main__":
   main()

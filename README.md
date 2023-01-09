@@ -76,6 +76,8 @@ Each file contains more specific instructions _particular to that file_. The gen
 
 Each directional folder features a `Stoplight.py` file. Each works a slightly different way, but they're all in need of serious repair to put them back in working order.
 
+** Every stoplight uses a version of the variable light; this variable can be used to store one of the following four emoji values (as a single character string) to represent the light's current status: 🟢🟡🔴⚫.
+
 #### `north`
 
 A standard stoplight, cycling through each light once.
@@ -91,6 +93,15 @@ A typical pattern for less-used roads, flashing red.
 * If the light was 🔴, it becomes ⚫
 * If the light was ⚫, it becomes 🔴
 
+#### `south-west`
+
+A simple light to sense a crosswalk signal.
+
+* If the crosswalk signal is ✔️, the light becomes 🔴
+* If the crosswalk signal is ❌, the light becomes 🟢
+
+** This stoplight uses the variable `crosswalk`; this variable can be used to store one of the following two emoji values (as a single character string) to represent if the crosswalk signal is active(✔️) or not active(❌).
+
 #### `east`
 
 A light with a timed turn signal.
@@ -102,15 +113,38 @@ A light with a timed turn signal.
 * If the light was 🟢, it becomes 🟡
 * If the light was 🟡, it becomes 🔴
 
+** This light uses `turn` and `hold`, these variables are both `Boolean` values (i.e., `True` or `False`).
+
 #### `west`
 
-Another, simpler, timed light in which green and red last for `5` seconds
+Another, simpler, timed light in which green and red last for `5` seconds. Here, the timing is also handled for you -- all you need to do is string the logic together.
 
 * If the light was 🟡, it becomes 🔴
 * After holding for `5` seconds, a 🔴 becomes a 🟢
 * After holding for `5` seconds, a 🟢 becomes a 🔴
 
-Here, the timing is also handled for you -- all you need to do is string the logic together.
+** This light uses `timeout`, this is a `Boolean` value (i.e., `True` or `False`).
+
+#### `north-west`
+
+A full crosswalk light system in which the light slowly becomes red after a crosswalk signal has been activated
+
+* If the crosswalk signal is ❌ and the light is 🟢, the crosswalk becomes ✔️
+* If the crosswalk signal is ✔️ and the light is 🟢, the light becomes 🟡
+* If the crosswalk signal is ✔️ and the light is 🟡, the light becomes 🔴
+* If the crosswalk signal is ✔️ and the light is 🔴, the light becomes 🔴 and the crosswalk signal becomes ❌
+
+** This stoplight uses the variable `crosswalk`; this variable can be used to store one of the following two emoji values (as a single character string) to represent if the crosswalk signal is active(✔️) or not active(❌).
+
+#### `north-east`
+
+A dual-direction light system that detects which way traffic is coming from and switches the lights accordingly. There are two directions of lights to control the traffic. The first set of controls are for the lights and traffic coming from the north and south of the light as represented by the `northlight` and `northtraffic` variables. The second set of controls are for the lights and traffic coming from the east and west of the light as represented by the `eastlight` and `easttraffic` variables.
+
+* If there is traffic coming from one direction that has a 🔴 while the other side has no traffic and a 🟢, the light without traffic should switch to a 🟡.
+* If there is traffic coming from one direction that has a 🔴 while the other side has no traffic and a 🟡, the light that has traffic should switch to 🟢 and the one that does not should switch to 🔴.
+  * The lights should flip from 🟢 to 🔴 so that the lights switch back and forth.
+
+** This light uses `northlight` and `eastlight` with the 🟢🟡🔴 signals, and `northtraffic` and `easttraffic` with the traffic(✔️) and no traffic(❌) signals
 
 ### The `Car.py` and `Bus.py`
 
