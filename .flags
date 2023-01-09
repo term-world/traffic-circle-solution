@@ -1,10 +1,10 @@
 {
   "south_light": "\u26ab",
-  "east_light": "\ud83d\udd34",
-  "east_turn": "00:00:00",
+  "east_light": "\ud83d\udfe2",
+  "east_turn": 1673289619.902551,
   "north_light": "\ud83d\udfe2",
-  "west_light": "\ud83d\udfe2",
-  "west_time": "23:55:57",
+  "west_light": "\ud83d\udd34",
+  "west_time": 1673289760.972291,
   "cwd": "/world/city/Ix/dluman/traffic-circle",
   "north_west_light": "\ud83d\udfe2",
   "north_west_crosswalk": "\u2714\ufe0f",
@@ -13,5 +13,5 @@
   "north_north_east_light": "\ud83d\udfe2",
   "east_north_east_light": "\ud83d\udd34",
   "north_north_east_traffic": "\u274c",
-  "east_north_east_traffic": "\u2714\ufe0f"
+  "east_north_east_traffic": "\u274c"
 }
