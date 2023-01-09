@@ -76,6 +76,8 @@ Each file contains more specific instructions _particular to that file_. The gen
 
 Each directional folder features a `Stoplight.py` file. Each works a slightly different way, but they're all in need of serious repair to put them back in working order.
 
+** Every light uses a version of the variable `light` which uses these symbols: 🟢🟡🔴⚫
+
 #### `north`
 
 A standard stoplight, cycling through each light once.
@@ -91,6 +93,15 @@ A typical pattern for less-used roads, flashing red.
 * If the light was 🔴, it becomes ⚫
 * If the light was ⚫, it becomes 🔴
 
+#### `south-west`
+
+An simple light to sense a crosswalk signal.
+
+* If the crosswalk signal is ✔️, the light becomes 🔴
+* If the crosswalk signal is ❌, the light becomes 🟢
+
+** this light uses `crosswalk` with the symbols ✔️❌
+
 #### `east`
 
 A light with a timed turn signal.
@@ -102,15 +113,38 @@ A light with a timed turn signal.
 * If the light was 🟢, it becomes 🟡
 * If the light was 🟡, it becomes 🔴
 
+** This light uses `turn` and `hold`, these variables are both `Boolean` values
+
 #### `west`
 
-Another, simpler, timed light in which green and red last for `5` seconds
+Another, simpler, timed light in which green and red last for `5` seconds. Here, the timing is also handled for you -- all you need to do is string the logic together.
 
 * If the light was 🟡, it becomes 🔴
 * After holding for `5` seconds, a 🔴 becomes a 🟢
 * After holding for `5` seconds, a 🟢 becomes a 🔴
 
-Here, the timing is also handled for you -- all you need to do is string the logic together.
+** This light uses `timeout`, this is a `Boolean` value
+
+#### `north-west`
+
+A full crosswalk light system in which the light slowly becomes red after a crosswalk signal has been activated
+
+* If the crosswalk signal is ❌ and the light is 🟢, the crosswalk becomes ✔️
+* If the crosswalk signal is ✔️ and the light is 🟢, the light becomes 🟡
+* If the crosswalk signal is ✔️ and the light is 🟡, the light becomes 🔴
+* If the crosswalk signal is ✔️ and the light is 🔴, the light becomes 🔴 and the crosswalk signal becomes ❌
+
+** this light uses `crosswalk` with the symbols ✔️❌
+
+#### `north-east`
+
+A duel-direction light system that detects which way traffic is coming from and switches the lights accordingly.
+
+* if there is traffic coming from one direction that does not have a 🟢, then switch the lights so that the 🟢 that does not have traffic switches to 🟡. Then the light that has traffic should switch to 🟢 and the one that does not should switch to 🔴.
+  * One light will always end up 🟢 so that there will always be a 🟢 and 🔴.
+
+** this light uses `northlight` and `eastlight` with the 🟢🟡🔴 signals, and `northtraffic` and `easttraffic` with the ✔️❌ signals
+
 
 ### The `Car.py` and `Bus.py`
 
