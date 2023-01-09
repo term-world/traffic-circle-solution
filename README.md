@@ -138,7 +138,7 @@ A full crosswalk light system in which the light slowly becomes red after a cros
 
 #### `north-east`
 
-A dual-direction light system that detects which way traffic is coming from and switches the lights accordingly. There are two directions of lights to control the traffic. the first set of controls are for the lights and traffic coming from the north and south of the light as represented by the `northlight` and `northtraffic` variables. The second set of controls are for the lights and traffic coming from the east and west of the light as represented by the `eastlight` and `easttraffic` variables.
+A dual-direction light system that detects which way traffic is coming from and switches the lights accordingly. There are two directions of lights to control the traffic. The first set of controls are for the lights and traffic coming from the north and south of the light as represented by the `northlight` and `northtraffic` variables. The second set of controls are for the lights and traffic coming from the east and west of the light as represented by the `eastlight` and `easttraffic` variables.
 
 * If there is traffic coming from one direction that has a 🔴 while the other side has no traffic and a 🟢, the light without traffic should switch to a 🟡.
 * If there is traffic coming from one direction that has a 🔴 while the other side has no traffic and a 🟡, the light that has traffic should switch to 🟢 and the one that does not should switch to 🔴.
