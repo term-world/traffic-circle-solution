@@ -18,7 +18,7 @@ class Stoplight(FixtureSpec):
 
     def __time_now(self) -> str:
         now = datetime.now().timestamp()
-       return now
+        return now
 
     def __timing(self) -> bool:
         now = float(self.__time_now())
