@@ -33,9 +33,9 @@ class Stoplight(FixtureSpec):
     # Do not alter
 
 def main():
-  obj = Stoplight()
-  obj.use()
-  print(obj)
+  stoplight = Stoplight()
+  stoplight.use()
+  print(stoplight)
 
 if __name__ == "__main__":
   main()
