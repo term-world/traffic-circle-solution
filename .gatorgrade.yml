@@ -1,6 +1,7 @@
 # TODOs
 - office/reflection.md:
   - description: No TODO markers left in reflection.md
+    category: Reflection
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -8,6 +9,7 @@
       exact: true
 - north/Stoplight.py:
   - description: No TODO markers left in north/Stoplight.py
+    category: Let there be Light (North)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -15,6 +17,7 @@
       exact: true
 - south/Stoplight.py:
   - description: No TODO markers left in south/Stoplight.py
+    category: Let there be Light (South)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -22,6 +25,7 @@
       exact: true
 - east/Stoplight.py:
   - description: No TODO markers left in east/Stoplight.py
+    category: Let there be Light (East)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -29,6 +33,7 @@
       exact: true
 - west/Stoplight.py:
   - description: No TODO markers left in west/Stoplight.py
+    category: Let there be Light (West)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -36,6 +41,7 @@
       exact: true
 - .bus:
   - description: No TODO markers left in Bus.py (wherever it ended up)
+    category: The Public Transport Project (Bus)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -43,6 +49,7 @@
       exact: true
 - .car:
   - description: No TODO markers left in Car.py (wherever it ended up)
+    category: The Private Transport Project (Car)
     check: MatchFileFragment
     options:
       fragment: "TODO"
@@ -50,6 +57,7 @@
       exact: true
 # Events
 - description: Bus has traveled (is no longer in main folder)
+  category: The Public Transport Project (Bus)
   check: MatchCommandFragment
   options:
     command: find Bus.py
@@ -57,6 +65,7 @@
     count: 0
     exact: true
 - description: Car has traveled (is no longer in main folder)
+  category: The Private Transport Project (Car)
   check: MatchCommandFragment
   options:
     command: find Car.py
@@ -66,54 +75,63 @@
 # Code cops
 - north/Stoplight.py:
   - description: north/Stoplight.py contains at least two if statements for the light variable
+    category: Let there be Light (North)
     check: MatchFileRegex
     options:
       regex: "(el)?if\\slight\\s=="
       count: 2
 - south/Stoplight.py:
   - description: south/Stoplight.py contains at least two if statements for the light variable
+    category: Let there be Light (South)
     check: MatchFileRegex
     options:
       regex: "(el)?if\\slight\\s=="
       count: 2
 - east/Stoplight.py:
   - description: east/Stoplight.py contains at least two if statements for the light variable
+    category: Let there be Light (East)
     check: MatchFileRegex
     options:
       regex: "(el)?if\\slight\\s=="
       count: 2
 - east/Stoplight.py:
   - description: east/Stoplight.py accounts for the turn signal
+    category: Let there be Light (East)
     check: MatchFileRegex
     options:
       regex: "and\\s(not)?\\sturn"
       count: 3
 - east/Stoplight.py:
   - description: east/Stoplight.py accounts for the hold between signals
+    category: Let there be Light (East)
     check: MatchFileRegex
     options:
       regex: "and\\s(not\\s)?hold"
       count: 1
 - west/Stoplight.py:
   - description: west/Stoplight.py accounts for the timeout between signals
+    category: Let there be Light (West)
     check: MatchFileRegex
     options:
       regex: "and\\s(not\\s)?timeout"
       count: 1
 - west/Stoplight.py:
   - description: west/Stoplight.py contains at least two if statements for the light variable
+    category: Let there be Light (West)
     check: MatchFileRegex
     options:
       regex: "(el)?if\\slight\\s=="
       count: 2
 - .bus:
   - description: Bus.py (wherever it is) uses a while statement
+    category: The Public Transport Project (Bus)
     check: MatchFileRegex
     options:
       regex: "while\\sstoplight"
       count: 1
 - .car:
   - description: Car.py (where'd it go?) uses at least two if statements for the signal variable
+    category: The Private Transport Project (Car)
     check: MatchFileRegex
     options:
       regex: "(el)?if\\ssignal\\s=="
