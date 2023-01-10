@@ -160,7 +160,18 @@ To make an improvement proposal, you must _create an issue_ on this repository. 
 * clicking the green `New Issue` button
 * selecting the `Improvement Proposal` template 
 
-**You must fill out the entire template and wait for Mayoral approval before starting the improvement.**
+### Improvement Suggestions
+
+* Add a new emergency vehicle 
+* Add a bike
+* Make the bus stop for new passengers
+* Add new signals for the vehicles such as:
+ * Contruction
+ * Pedestrians
+ * Yellow lights
+*  Create a new traffic light
+
+**If you are not following an improvment suggestion you need to have your imporment suggestion checked by the professor before proceeding.**
 
 ## Backup Policy Reminder
 
