@@ -162,36 +162,6 @@ To make an improvement proposal, you must _create an issue_ on this repository. 
 
 **You must fill out the entire template and wait for Mayoral approval before starting the improvement.**
 
-## Updating `traffic-circle` Content in Your Local Workspace
-
-At some point you may wish to update the content in your local workspace with the changes being implemented by your teammates. 
-
-To do so, `git checkout main` (or other collaborative branch) and run the command:
-
-```
-git pull
-```
-
-This will update your local workspace with the content stored in the `main` branch.
-
-### `checkout` other folks' branches
-
-It's _very_ likely that you'll run into the need to `checkout` a branch that GitHub has, but you don't. Here's a reminder of the steps to do that.
-
-First, `fetch` all of the changes from the `remote` (GitHub):
-
-```
-git fetch --all
-```
-
-Once you've received this information, to `checkout` the `east-stoplight` branch (for example):
-
-```
-git checkout --track origin/east-stoplight
-```
-
-This will copy that branch from GitHub to your local workspace. You'll now also be able to `push` and `pull` to/from it.
-
 ## Backup Policy Reminder
 
 **While we may use this server to store code, you are responsible for using GitHub as your main backup.**
